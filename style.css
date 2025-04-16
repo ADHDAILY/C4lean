@@ -1,0 +1,298 @@
+/* --------------------------------------------- */
+/* 🌱 ALGEMENE RESET & BODY                      */
+/* --------------------------------------------- */
+* {
+  margin: 0;                                           /* Verwijdert standaard marge op alle elementen */
+  padding: 0;                                          /* Verwijdert standaard opvulling */
+  box-sizing: border-box;                             /* Zorgt dat breedte en hoogte paddings en borders meenemen */
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;  /* Basislettertype voor leesbaarheid */
+  line-height: 1.6;                                              /* Regelafstand voor rustiger lezen */
+  background: #f7fdf9;                                           /* Lichtgroene achtergrondkleur voor rustige uitstraling */
+  color: #333;                                                   /* Donkergrijze tekstkleur voor contrast */
+}
+
+
+/* --------------------------------------------- */
+/* 🔝 STICKY TOPBALK                             */
+/* --------------------------------------------- */
+.sticky-bar {
+  position: fixed;                                    /* Zet de balk vast bovenaan het scherm */
+  top: 0;
+  left: 0;
+  width: 100%;                                        /* Laat de balk de volledige breedte innemen */
+  background-color: rgba(255, 255, 255, 0.85);        /* Semi-transparante witte achtergrond */
+  backdrop-filter: blur(4px);                         /* Subtiele blur voor moderne uitstraling */
+  display: flex;                                      /* Flexbox: zet de inhoud horizontaal */
+  justify-content: space-between;                    /* Logo links, knop rechts */
+  align-items: center;                               /* Verticaal gecentreerd */
+  padding: 1rem 5%;                                   /* Binnenruimte boven/onder 1rem, zijkanten 5% */
+  z-index: 1000;                                      /* Zorgt dat de balk boven andere elementen blijft */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);           /* Subtiele schaduw onder de balk */
+}
+
+.sticky-bar .logo {
+  font-size: 1.5rem;                                  /* Grootte van het logo */
+  font-weight: bold;                                  /* Dikke tekst voor herkenbaarheid */
+  color: #1b4332;                                     /* Donkergroene kleur als accent */
+}
+
+.cta-sticky {
+  background-color: #52b788;                          /* Frisgroene knopkleur */
+  color: white;                                       /* Witte tekst op knop */
+  padding: 0.6rem 1.2rem;                             /* Binnenruimte rondom tekst */
+  font-weight: bold;
+  border-radius: 6px;                                 /* Afgeronde hoeken voor zachte uitstraling */
+  text-decoration: none;                              /* Geen onderlijning */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);           /* Schaduw voor diepte */
+  transition: background-color 0.2s ease;             /* Soepele overgang bij hover */
+}
+
+.cta-sticky:hover {
+  background-color: #40916c;                          /* Donkergroen bij hover */
+}
+
+
+.idee-popup {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.idee-popup-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.idee-popup-content h2 {
+  margin-top: 0;
+}
+
+.idee-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.idee-form input,
+.idee-form textarea,
+.idee-form button {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.idee-form button {
+  background-color: #52b788;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.idee-form button:hover {
+  background-color: #40916c;
+}
+
+
+/* --------------------------------------------- */
+/* 🖼️ HERO BANNER                                */
+/* --------------------------------------------- */
+.hero-banner {
+  background-image: url('../Images/Startpagina.jpg'); /* Achtergrondafbeelding in de hero banner */
+  background-size: cover;                             /* Laat afbeelding de hele banner opvullen */
+  background-position: center 30%;                    /* Iets omhoog gepositioneerd */
+  min-height: 90vh;                                   /* Minimaal 90% van schermhoogte */
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 19rem;                                 /* Ruimte zodat tekst niet over de afbeelding valt */
+  position: relative;
+}
+
+.hero-content {
+  text-align: center;                                 /* Centreert tekst horizontaal */
+  padding: 2rem;
+  color: #070707;                                     /* Bijna zwart voor maximale leesbaarheid */
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;                                  /* Grote titeltekst */
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;                                  /* Ondertitel formaat */
+  margin: 0;                                          /* Verwijdert marges */
+}
+
+
+/* --------------------------------------------- */
+/* 🔄 METHODIEK                                   */
+/* --------------------------------------------- */
+.methodiek {
+  background: #ffffff;                                /* Witte achtergrond voor fris gevoel */
+  text-align: center;                                 /* Teksten centreren in deze sectie */
+  padding: 5rem 2rem 6rem 2rem;                        /* Binnenruimte rondom */
+}
+
+.methodiek .subtitel {
+  color: #52b788;                                     /* Groene kleur voor subtitel */
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.methodiek .hoofdtitel {
+  font-size: 2.4rem;                                  /* Extra grote titel */
+  font-weight: 800;
+  color: #1b4332;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.methodiek .uitleg {
+  max-width: 900px;                                   /* Breedteselectie voor leesbaarheid */
+  margin: 0 auto;
+  padding-left: 60px;                                 /* Handmatige uitlijning vanaf links */
+  padding-right: 1rem;
+  font-size: 1.1rem;
+  color: #495057;
+  line-height: 1.75;
+  text-align: left;
+}
+
+
+/* --------------------------------------------- */
+/* 🧱 PIJLERS                                     */
+/* --------------------------------------------- */
+.pijlers {
+  background: #f7fdf9;                                /* Lichtgroene achtergrondkleur */
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.pijlers .subtitel {
+  color: #52b788;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.pijlers .hoofdtitel {
+  font-size: 2rem;
+  color: #1b4332;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.intro-tekst {
+  font-size: 1rem;
+  color: #495057;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  text-align: center;
+}
+
+.pijlers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);              /* Twee kolommen */
+  gap: 3rem 4rem;
+  max-width: 900px;
+  margin: 2rem auto 0 auto;
+}
+
+.pijler img {
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+.pijler h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #2d6a4f;
+}
+
+.pijler p {
+  font-size: 0.95rem;
+  color: #495057;
+}
+
+
+/* --------------------------------------------- */
+/* 💭 UITDAGING                                  */
+/* --------------------------------------------- */
+.uitdaging {
+  background: #ffffff;
+  padding: 5rem 2rem;
+  text-align: center;
+  color: #333;
+}
+
+.uitdaging .subtitel {
+  color: #52b788;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.uitdaging .hoofdtitel {
+  font-size: 2rem;
+  color: #1b4332;
+  margin-bottom: 2rem;
+  font-family: 'Merriweather', serif;
+  text-align: center;
+}
+
+.uitdaging .uitleg {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: 150px;                                 /* Zelfde handmatige marge als bij methodiek */
+  padding-right: 1rem;
+  font-size: 1.1rem;
+  color: #495057;
+  line-height: 1.75;
+  text-align: left;
+}
+
+
+/* --------------------------------------------- */
+/* 📎 FOOTER                                     */
+/* --------------------------------------------- */
+footer {
+  background: #d8f3dc;                                /* Lichtgroene achtergrond */
+  color: #333;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  border-top: 1px solid #c1e4cf;
+}
